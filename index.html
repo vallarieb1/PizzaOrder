@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza!</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+
+</head>
+
+<body>
+
+    <!-- Start header -->
+
+    <header class="site_header">
+        <div id="branding">
+            <img src="./images/pizman3.png" alt="pizzaMan" width="50px" height="50px">
+            <img src="./images/pizman1.gif" alt="pizzaMan" width="50px" height="50px">
+            <img src="./images/pizman2.gif" alt="pizzaMan" width="50px" height="50px">
+
+
+        </div>
+        <div> 
+            <h1>Hungry?
+            <br>
+            Let's make your pizza!
+            </h1>
+
+        </div>
+
+        
+    </header>
+
+    <div class="wrapper">
+        <div class="gen">
+            <h3><u>Base Pizza</u></h3>
+            <ul class="rules">
+                <li>Personal<span class="price">&#36 6.00</span></li>
+                <li>Medium<span class="price">&#36 10.00</span></li>
+                <li>Large<span class="price">&#36 14.00</span></li>
+                <li>Extra Large<span class="price">&#36 16.00</span></li>
+                <h5><em>* Complimentary:<br> 1 protein &amp 1 veggie</em></h5>
+            </ul>
+        </div>
+
+        <div class="add">
+            <h3><u>Add-ons</u></h3>
+            <ul class="rules">
+                <li>Protein<span class="price">+ &#36 1.00/ea</span></li>
+                <li>Veggie<span class="price">+ &#36 1.00/ea</span></li>
+                <br>
+                <li>Extra Cheese<span class="price">+ &#36 3.00</span></li>
+                <br>
+                <li>Cheese Stuffed Crust<span class="price">+ &#36 3.00</span></li>
+            </ul>
+        </div>
+
+        <div class="size orderRadios" id="sizeOption">
+            <h3><u>Pick a Size</u></h3>
+            <input type="radio" name="size" value="Personal"> Personal
+                <br><br>
+            <input type="radio" name="size" value="Medium"> Medium
+                    <br><br>
+            <input type="radio" name="size" value="Large"> Large
+                <br><br>
+            <input type="radio" name="size" value="Extra Large"> Extra Large
+        </div>
+
+        <div class="crust orderRadios">
+            <h3><u>The Crust</u></h3>
+            <input type="radio" name="crust"value="Plain"> Plain Crust
+                <br><br>
+            <input type="radio" name="crust" value="Garlic Butter"> Garlic Butter
+                <br><br>
+            <input type="radio" name="crust" value="Cheese Stuffed"> Cheese Stuffed
+                <br><br>
+            <input type="radio" name="crust" value="Spicy"> Spicy
+                <br><br>
+            <input type="radio" name="crust" value="House Special"> House Special
+        </div>
+
+        <div class="sauce orderRadios">
+            <h3><u>Fancy a Sauce?</u></h3>
+            <input type="radio" name="sauce" value="Marinara"> Marinara
+                <br><br>
+            <input type="radio" name="sauce" value="White"> White
+                <br><br>
+            <input type="radio" name="sauce" value="Barbeque"> Barbeque
+                <br><br>
+            <input type="radio" name="sauce" value="No Sauce"> No Sauce
+        </div>
+
+        <div class="cheese orderRadios">
+            <h3><u>Say Cheese!</u></h3>
+            <input type="radio" name="cheese" value="Regular Cheese"> Regular Cheese
+                <br><br>
+            <input type="radio" name="cheese" value="No Cheese"> No Cheese
+                <br><br>
+            <input type="radio" name="cheese" value="Extra Cheese"> Extra Cheese
+               
+        </div> 
+
+        <div class="protein">
+            <h3><u>Savory Proteins</u></h3>
+            <input type="checkbox" name="protein" value="Pepperoni"> Pepperoni
+                <br><br>
+            <input type="checkbox" name="protein" value="Sausage"> Sausage
+                <br><br>
+            <input type="checkbox" name="protein" value="Canadian Bacon"> Canadian Bacon
+                <br><br>
+                <input type="checkbox" name="protein" value="Ground Beef"> Ground Beef
+                <br><br>
+            <input type="checkbox" name="protein" value="Anchovy"> Anchovy
+                <br><br>
+            <input type="checkbox" name="protein" value="Chicken"> Chicken
+        </div>
+
+        <div class="veg">
+            <h3><u>Yummy Veggies</u></h3>
+            <input type="checkbox" name="veg" value="Tomatoes"> Tomatoes
+                <br><br>
+            <input type="checkbox" name="veg" value="Onions"> Onions
+                <br><br>
+            <input type="checkbox" name="veg" value="Olives"> Olives
+                <br><br>
+            <input type="checkbox" name="veg" value="Green Peppers"> Green Peppers
+                <br><br>
+            <input type="checkbox" name="veg" value="Mushrooms"> Mushrooms
+                <br><br>
+            <input type="checkbox" name="veg" value="Pineapple"> Pineapple
+                <br><br>
+            <input type="checkbox" name="veg" value="Spinach"> Spinach
+                <br><br>
+            <input type="checkbox" name="veg" value="Jalapeno"> Jalapeno
+        </div>
+
+        <div class="checkout">
+            <h3>You Selected:</h3>
+            <div class ="orderBox" id="preview">
+                <div class"preview" id="previewSize"></div>
+                <div class"preview"  id="previewCrust"></div>
+                <div class"preview"  id="previewSauce"></div>
+                <div class"preview"  id="previewCheese"></div>
+                <div class"preview"  id="previewProtein"></div>
+                <div class"preview"  id="previewVeg"></div>
+                <br><br>
+
+            </div>
+            
+            <div id=buttonContainer>
+                <button class="button button1" id="order" value="Order It" type="submit">Order It</button>
+                    
+                <button class="button button1" id="cancel" value="Cancel It" type="submit" >Cancel It</button> 
+                
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- Modal for receipt -->
+
+    <div id="receipt" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="closeBtn">&times;</span>
+                <h2>Your Receipt</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you! You've ordered:</p>
+                <div class= orderBox id="grandOrder">
+                </div>
+                <div id="grandTotal">
+                    
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Email receipt &amp track pizza.</h3>
+                <input type="email" name="email" placeholder="your email">
+                <input type="submit" value="Submit">
+                <br><br>
+
+
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+
+<script src="./scripts/js.js"></script>
+
+
+</body>
+
+</html>

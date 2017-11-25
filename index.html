@@ -106,7 +106,7 @@
                
         </div> 
 
-        <div class="protein">
+        <div class="protein orderCheckbox">
             <h3><u>Savory Proteins</u></h3>
             <input type="checkbox" name="protein" value="Pepperoni"> Pepperoni
                 <br><br>
@@ -121,7 +121,7 @@
             <input type="checkbox" name="protein" value="Chicken"> Chicken
         </div>
 
-        <div class="veg">
+        <div class="veg orderCheckbox">
             <h3><u>Yummy Veggies</u></h3>
             <input type="checkbox" name="veg" value="Tomatoes"> Tomatoes
                 <br><br>
@@ -165,24 +165,54 @@
 
     <!-- Modal for receipt -->
 
-    <div id="receipt" class="modal">
+    <div class="modal" id="receipt">
         <div class="modal-content">
             <div class="modal-header">
                 <span id="closeBtn">&times;</span>
-                <h2>Your Receipt</h2>
+                <h2>Thank you!<br> Here's Your Receipt</h2>
             </div>
             <div class="modal-body">
-                <p>Thank you! You've ordered:</p>
-                <div class= orderBox id="grandOrder">
-                </div>
-                <div id="grandTotal">
+                <p><strong>You've ordered:</strong></p>
+
+                <table>
+                    <tr>
+                        <td class="orderList" id="grandSize"></td>
+                        <td class="orderTotal" id="totalSize"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderList" id="grandCrust"></td>
+                        <td class="orderTotal" id="totalCrust"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderList" id="grandSauce"></td>
+                        <td class="orderTotal" id="totalSauce"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderList" id="grandCheese"></td>
+                        <td class="orderTotal" id="totalCheese"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderList" id="grandProtein"></td>
+                        <td class="orderTotal" id="totalProtein"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderList" id="grandVeg"></td>
+                        <td class="orderTotal" id="totalVeg"></td>
+                    </tr>
+                    <tr class="line"></tr>
+                    <tr class="last">
+                        <td class="orderList" id="grandOrder"><strong>Grand Total</strong></td>
+                        <td class="orderTotal" id="grandTotal"></td>
+                    </tr>
                     
 
-                </div>
+                </table>
+
+                <p><strong>See you in about 30 minutes!</strong></p>
             </div>
 
             <div class="modal-footer">
-                <h3>Email receipt &amp track pizza.</h3>
+                <h3>Email receipt &amp track my pizza.</h3>
                 <input type="email" name="email" placeholder="your email">
                 <input type="submit" value="Submit">
                 <br><br>
@@ -196,7 +226,7 @@
     
 
 
-<script src="./scripts/js.js"></script>
+<script src="./scripts/newjs.js"></script>
 
 
 </body>

@@ -154,7 +154,7 @@ body {
 
 .modal-header {
     background: #3b99a5;
-    padding: 10px;
+    padding: 20px;
     color: #fff;
     text-align: center;
 }
@@ -164,26 +164,67 @@ body {
 }
 
 .modal-body {
-    padding: 10px 20px;
+    padding: 15px 35px;
+    text-align: center;
+    background-color: white;
 }
 
+table {
+    display: table;
+}
+
+td.orderList {
+    text-align: left;
+    padding-right: 10px;
+}
+
+
+td.orderTotal + td.orderTotal {
+    text-align: right;
+}
+
+td#grandtotal.orderlist {
+    padding-top: 5px;
+}
+
+td {
+    padding: 4px 10px;
+}
+
+tr.last {
+    font-size: 16px;
+    height: 50px;
+}
+
+
+/*
 #grandOrder {
     float: left;
-    width: 150px;
-    min-height: 150px auto;
+    width: 57%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    background: white;
+    text-align: left;
 }
-#grandTotal {
+
+#total {
     float: right;
-    width: 100px;
-    min-height: 150px auto;
+    width: 35%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: white;
+    text-align: right;
 }
+*/
 
 .modal-footer {
     background: #3b99a5;
-    padding: 5px;
+    padding: 10px;
     color: #fff;
     text-align: center;
 }
+
 
 #closeBtn {
     color: #fff;

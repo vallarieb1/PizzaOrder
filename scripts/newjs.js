@@ -40,7 +40,8 @@ function sumSize(e) {
         }
 
         console.log('Size Total: $'+sizeTotal+'.00')
-        runningTotal = sizeTotal;
+    
+        runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
     }
     
     document.getElementById('grandSize').innerHTML = selectedSize;
@@ -79,7 +80,8 @@ function sumCrust(e, runningTotal, preview) {
             crustTotal = 3;
         } else crustTotal = 0;
     }
-    runningTotal=sizeTotal+crustTotal;
+    
+    runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
     console.log('Crust Total: $' + crustTotal + '.00')
     
     document.getElementById('grandCrust').innerHTML = selectedCrust+" Crust";
@@ -114,16 +116,19 @@ function sumSauce(e, runningTotal, preview) {
             var selectedSauce = previewSauce[z].value;
         }
 
-        console.log('Sauce Total: $' + sauceTotal + '.00');
-        runningTotal=sizeTotal+crustTotal+sauceTotal;
+        
+        runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
 
         document.getElementById('grandSauce').innerHTML = selectedSauce;
         document.getElementById('totalSauce').innerHTML = sauceTotal + ".00";
         
-        console.log('Running Total: $'+runningTotal+'.00');
         document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
         
     }
+    console.log('Sauce Total: $' + sauceTotal + '.00');
+    runningTotal=sizeTotal+crustTotal+sauceTotal;
+    console.log('Running Total: $'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
 }
 
 
@@ -156,7 +161,7 @@ function sumCheese(e, runningTotal, preview) {
             cheeseTotal = 3;
         } else cheeseTotal = 0;
 
-        runningTotal=sizeTotal+crustTotal+sauceTotal+cheeseTotal;
+        runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
     }
 
     console.log('Cheese Total: $' + cheeseTotal + '.00')
@@ -207,7 +212,8 @@ function sumProtein(e, runningTotal, preview) {
     else {
         proteinTotal = 0;
     }
-    runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal;
+    
+    runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
 
     console.log("Total Protein Selected: " + proteinCount);
 

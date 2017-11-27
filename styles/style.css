@@ -173,9 +173,18 @@ table {
     display: table;
 }
 
+td {
+    padding: 4px 10px;
+}
+
 td.orderList {
     text-align: left;
     padding-right: 10px;
+    width: 65%
+}
+
+td.orderTotal{
+    width: 35%;
 }
 
 
@@ -187,36 +196,11 @@ td#grandtotal.orderlist {
     padding-top: 5px;
 }
 
-td {
-    padding: 4px 10px;
-}
-
 tr.last {
     font-size: 16px;
     height: 50px;
 }
 
-
-/*
-#grandOrder {
-    float: left;
-    width: 57%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    background: white;
-    text-align: left;
-}
-
-#total {
-    float: right;
-    width: 35%;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    background: white;
-    text-align: right;
-}
-*/
 
 .modal-footer {
     background: #3b99a5;
